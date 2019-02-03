@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  FoodTracker
+//  Hiconap
 //
-//  Created by Farukh Sharipov on 21/01/2019.
+//  Created by Farukh Sharipov on 03/02/2019.
 //  Copyright © 2019 Farukh Sharipov. All rights reserved.
 //
 

@@ -1,15 +1,15 @@
 //
-//  FoodTrackerTests.swift
-//  FoodTrackerTests
+//  HiconapTests.swift
+//  HiconapTests
 //
-//  Created by Farukh Sharipov on 21/01/2019.
+//  Created by Farukh Sharipov on 03/02/2019.
 //  Copyright © 2019 Farukh Sharipov. All rights reserved.
 //
 
 import XCTest
-@testable import FoodTracker
+@testable import Hiconap
 
-class FoodTrackerTests: XCTestCase {
+class HiconapTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
