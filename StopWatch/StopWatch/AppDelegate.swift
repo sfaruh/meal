@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Hiconap
+//  StopWatch
 //
-//  Created by Farukh Sharipov on 03/02/2019.
+//  Created by Farukh Sharipov on 19/02/2019.
 //  Copyright © 2019 Farukh Sharipov. All rights reserved.
 //
 

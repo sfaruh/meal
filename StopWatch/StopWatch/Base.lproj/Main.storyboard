@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="Nw0-eW-4Ix">
+            <objects>
+                <viewController id="hKK-b2-3Br" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VaX-ML-i9e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bbX-2m-rjR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="zV7-Px-lzQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82K-HH-Bpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="286"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="zZA-u0-K6T">
+            <objects>
+                <viewController id="Qi0-yg-SWI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PEZ-O1-Q82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-rC-29F">
+                                <rect key="frame" x="146" y="50" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agV-89-OHK">
+                                <rect key="frame" x="170.5" y="116" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOh-bz-OfA">
+                                <rect key="frame" x="166.5" y="176" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-Vz-5jn">
+                                <rect key="frame" x="168" y="236" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w9X-rC-29F" firstAttribute="top" secondItem="SNX-yN-Mr4" secondAttribute="top" constant="30" id="D3R-RQ-bt4"/>
+                            <constraint firstItem="w9X-rC-29F" firstAttribute="centerX" secondItem="PEZ-O1-Q82" secondAttribute="centerX" id="GQN-Y4-bAD"/>
+                            <constraint firstItem="eQN-Vz-5jn" firstAttribute="top" secondItem="qOh-bz-OfA" secondAttribute="bottom" constant="30" id="KwS-zi-bHU"/>
+                            <constraint firstItem="qOh-bz-OfA" firstAttribute="top" secondItem="agV-89-OHK" secondAttribute="bottom" constant="30" id="RJr-AE-deO"/>
+                            <constraint firstItem="eQN-Vz-5jn" firstAttribute="centerX" secondItem="PEZ-O1-Q82" secondAttribute="centerX" id="X3g-8E-1Ky"/>
+                            <constraint firstItem="agV-89-OHK" firstAttribute="centerX" secondItem="PEZ-O1-Q82" secondAttribute="centerX" id="fTU-9b-m4A"/>
+                            <constraint firstItem="agV-89-OHK" firstAttribute="top" secondItem="w9X-rC-29F" secondAttribute="bottom" constant="30" id="kuZ-GI-BPi"/>
+                            <constraint firstItem="qOh-bz-OfA" firstAttribute="centerX" secondItem="PEZ-O1-Q82" secondAttribute="centerX" id="r8k-Sc-II8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SNX-yN-Mr4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="uhb-uN-ZvN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtC-gp-Sc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.60000000000002" y="-379.16041979010498"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SpD-Ho-H4d">
+            <objects>
+                <tabBarController id="vWb-rR-CkU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L0M-fI-N4k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qi0-yg-SWI" kind="relationship" relationship="viewControllers" id="8CH-mM-FW6"/>
+                        <segue destination="hKK-b2-3Br" kind="relationship" relationship="viewControllers" id="cIz-B6-cRW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJg-0i-G3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="-46"/>
+        </scene>
+    </scenes>
+</document>
