@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWb-rR-CkU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,23 +10,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Timer-->
         <scene sceneID="Nw0-eW-4Ix">
             <objects>
                 <viewController id="hKK-b2-3Br" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VaX-ML-i9e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vga-SP-Svb">
+                                <rect key="frame" x="89" y="283" width="37.5" height="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-Dj-pTA">
+                                <rect key="frame" x="249" y="283" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-bn-Hzw">
+                                <rect key="frame" x="85" y="203" width="205" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-GR-57p">
+                                <rect key="frame" x="182" y="136" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-7B-ZU9">
+                                <rect key="frame" x="166.5" y="283" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="top" secondItem="yh6-GR-57p" secondAttribute="bottom" constant="46" id="4hN-3A-hBW"/>
+                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="centerX" secondItem="VaX-ML-i9e" secondAttribute="centerX" id="5ST-Fc-QKg"/>
+                            <constraint firstItem="vga-SP-Svb" firstAttribute="baseline" secondItem="Dnm-7B-ZU9" secondAttribute="baseline" id="C2x-X1-bQy"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="trailing" secondItem="i0z-Dj-pTA" secondAttribute="trailing" id="CGQ-fX-Wk5"/>
+                            <constraint firstItem="bbX-2m-rjR" firstAttribute="bottom" secondItem="Dnm-7B-ZU9" secondAttribute="bottom" constant="305" id="JoJ-7o-Y7o"/>
+                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="top" secondItem="ogo-bn-Hzw" secondAttribute="bottom" constant="50" id="Jtb-SI-ORe"/>
+                            <constraint firstItem="i0z-Dj-pTA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dnm-7B-ZU9" secondAttribute="trailing" constant="8" symbolic="YES" id="Kk3-LW-wsb"/>
+                            <constraint firstItem="vga-SP-Svb" firstAttribute="baseline" secondItem="i0z-Dj-pTA" secondAttribute="baseline" id="Nkd-Nh-sUR"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="centerX" secondItem="yh6-GR-57p" secondAttribute="centerX" id="QpS-wf-dIg"/>
+                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="leading" secondItem="vga-SP-Svb" secondAttribute="trailing" constant="40" id="Tek-Nb-sHJ"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="leading" secondItem="bbX-2m-rjR" secondAttribute="leading" constant="87" id="VbW-qR-Yhz"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="centerX" secondItem="Dnm-7B-ZU9" secondAttribute="centerX" id="hdu-JX-awB"/>
+                            <constraint firstItem="vga-SP-Svb" firstAttribute="leading" secondItem="bbX-2m-rjR" secondAttribute="leading" constant="89" id="uZy-j4-Qp6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bbX-2m-rjR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="zV7-Px-lzQ"/>
+                    <tabBarItem key="tabBarItem" title="Timer" id="zV7-Px-lzQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82K-HH-Bpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="286"/>
+            <point key="canvasLocation" x="557.60000000000002" y="285.60719640179911"/>
         </scene>
-        <!--Item 1-->
+        <!--Stop watch-->
         <scene sceneID="zZA-u0-K6T">
             <objects>
                 <viewController id="Qi0-yg-SWI" sceneMemberID="viewController">
@@ -50,7 +88,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-Vz-5jn">
                                 <rect key="frame" x="168" y="236" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.04830961332" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,7 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SNX-yN-Mr4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="uhb-uN-ZvN"/>
+                    <tabBarItem key="tabBarItem" title="Stop watch" id="uhb-uN-ZvN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtC-gp-Sc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
