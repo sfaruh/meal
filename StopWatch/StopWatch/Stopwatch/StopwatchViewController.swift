@@ -1,18 +1,18 @@
 //
-//  ViewController.swift
+//  StopwatchViewController.swift
 //  StopWatch
 //
-//  Created by Farukh Sharipov on 19/02/2019.
+//  Created by ITLabAdmin on 2/27/19.
 //  Copyright © 2019 Farukh Sharipov. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var timeLabel: UILabel!
+class StopwatchViewController: UIViewController {
+
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var counter = 0.0
     var timer = Timer()
@@ -64,6 +64,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }

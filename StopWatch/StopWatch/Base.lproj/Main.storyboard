@@ -13,7 +13,7 @@
         <!--Timer-->
         <scene sceneID="Nw0-eW-4Ix">
             <objects>
-                <viewController id="hKK-b2-3Br" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" id="hKK-b2-3Br" customClass="TimerViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VaX-ML-i9e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,14 +21,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vga-SP-Svb">
                                 <rect key="frame" x="89" y="283" width="37.5" height="30"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="JSM-ct-STN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-Dj-pTA">
                                 <rect key="frame" x="249" y="283" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="hKK-b2-3Br" eventType="touchUpInside" id="rIV-xg-ubg"/>
+                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-bn-Hzw">
-                                <rect key="frame" x="85" y="203" width="205" height="31"/>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-GR-57p">
                                 <rect key="frame" x="182" y="136" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,7 +41,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-7B-ZU9">
                                 <rect key="frame" x="166.5" y="283" width="42" height="30"/>
                                 <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="CXV-OG-b1F"/>
+                                </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-bn-Hzw">
+                                <rect key="frame" x="85" y="203" width="205" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="hKK-b2-3Br" eventType="valueChanged" id="SbV-eE-8Pk"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -58,7 +70,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bbX-2m-rjR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" id="zV7-Px-lzQ"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" selectedImage="timer" id="zV7-Px-lzQ"/>
+                    <connections>
+                        <outlet property="labelTimer" destination="yh6-GR-57p" id="3oZ-3g-TBr"/>
+                        <outlet property="pauseButton" destination="Dnm-7B-ZU9" id="bnd-l7-XLJ"/>
+                        <outlet property="resetButton" destination="i0z-Dj-pTA" id="jBA-j3-t7R"/>
+                        <outlet property="sliderTimer" destination="ogo-bn-Hzw" id="MB7-rh-8JS"/>
+                        <outlet property="startButton" destination="vga-SP-Svb" id="cVN-at-pVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82K-HH-Bpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +86,7 @@
         <!--Stop watch-->
         <scene sceneID="zZA-u0-K6T">
             <objects>
-                <viewController id="Qi0-yg-SWI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StopwatchViewController" id="Qi0-yg-SWI" customClass="StopwatchViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEZ-O1-Q82">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,16 +100,25 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agV-89-OHK">
                                 <rect key="frame" x="170.5" y="116" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="Qi0-yg-SWI" eventType="touchUpInside" id="dM0-SN-skp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOh-bz-OfA">
                                 <rect key="frame" x="166.5" y="176" width="42" height="30"/>
                                 <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseTimer:" destination="Qi0-yg-SWI" eventType="touchUpInside" id="gb7-09-I2v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-Vz-5jn">
                                 <rect key="frame" x="168" y="236" width="39" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="0.04830961332" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetTimer:" destination="Qi0-yg-SWI" eventType="touchUpInside" id="5Sr-TY-Ois"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +134,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SNX-yN-Mr4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stop watch" id="uhb-uN-ZvN"/>
+                    <tabBarItem key="tabBarItem" title="Stop watch" image="stopWatch" selectedImage="stopWatch" id="uhb-uN-ZvN"/>
+                    <connections>
+                        <outlet property="pauseButton" destination="qOh-bz-OfA" id="SeR-pl-mi7"/>
+                        <outlet property="startButton" destination="agV-89-OHK" id="chT-O6-ogN"/>
+                        <outlet property="timeLabel" destination="w9X-rC-29F" id="rYt-eS-45F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtC-gp-Sc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,4 +164,8 @@
             <point key="canvasLocation" x="-394" y="-46"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stopWatch" width="24" height="24"/>
+        <image name="timer" width="24" height="24"/>
+    </resources>
 </document>
