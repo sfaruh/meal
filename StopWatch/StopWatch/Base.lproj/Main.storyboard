@@ -18,55 +18,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vga-SP-Svb">
-                                <rect key="frame" x="89" y="283" width="37.5" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="JSM-ct-STN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-Dj-pTA">
-                                <rect key="frame" x="249" y="283" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetButton:" destination="hKK-b2-3Br" eventType="touchUpInside" id="rIV-xg-ubg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-GR-57p">
-                                <rect key="frame" x="182" y="136" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-7B-ZU9">
-                                <rect key="frame" x="166.5" y="283" width="42" height="30"/>
-                                <state key="normal" title="Pause"/>
-                                <connections>
-                                    <action selector="pauseTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="CXV-OG-b1F"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-bn-Hzw">
-                                <rect key="frame" x="85" y="203" width="205" height="31"/>
+                                <rect key="frame" x="30" y="101" width="315" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="hKK-b2-3Br" eventType="valueChanged" id="SbV-eE-8Pk"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-GR-57p">
+                                <rect key="frame" x="182" y="60" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eo-gW-zUV">
+                                <rect key="frame" x="102" y="155" width="171" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-7B-ZU9">
+                                        <rect key="frame" x="62" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="CXV-OG-b1F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vga-SP-Svb">
+                                        <rect key="frame" x="12" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startTimer:" destination="hKK-b2-3Br" eventType="touchUpInside" id="JSM-ct-STN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-Dj-pTA">
+                                        <rect key="frame" x="120" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButton:" destination="hKK-b2-3Br" eventType="touchUpInside" id="rIV-xg-ubg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Qn-Ly-N3f"/>
+                                    <constraint firstAttribute="trailing" secondItem="i0z-Dj-pTA" secondAttribute="trailing" constant="12" id="6yd-59-lRX"/>
+                                    <constraint firstItem="vga-SP-Svb" firstAttribute="leading" secondItem="4eo-gW-zUV" secondAttribute="leading" constant="12" id="77z-D5-ak8"/>
+                                    <constraint firstItem="Dnm-7B-ZU9" firstAttribute="leading" secondItem="vga-SP-Svb" secondAttribute="trailing" constant="16" id="ezp-Ly-Z6z"/>
+                                    <constraint firstItem="i0z-Dj-pTA" firstAttribute="centerY" secondItem="4eo-gW-zUV" secondAttribute="centerY" id="gbJ-TA-rW4"/>
+                                    <constraint firstItem="Dnm-7B-ZU9" firstAttribute="centerY" secondItem="4eo-gW-zUV" secondAttribute="centerY" id="gd6-O8-JJ9"/>
+                                    <constraint firstItem="i0z-Dj-pTA" firstAttribute="leading" secondItem="Dnm-7B-ZU9" secondAttribute="trailing" constant="16" id="i3o-xi-OLf"/>
+                                    <constraint firstItem="vga-SP-Svb" firstAttribute="centerY" secondItem="4eo-gW-zUV" secondAttribute="centerY" id="jx6-it-fdh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="top" secondItem="yh6-GR-57p" secondAttribute="bottom" constant="46" id="4hN-3A-hBW"/>
-                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="centerX" secondItem="VaX-ML-i9e" secondAttribute="centerX" id="5ST-Fc-QKg"/>
-                            <constraint firstItem="vga-SP-Svb" firstAttribute="baseline" secondItem="Dnm-7B-ZU9" secondAttribute="baseline" id="C2x-X1-bQy"/>
-                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="trailing" secondItem="i0z-Dj-pTA" secondAttribute="trailing" id="CGQ-fX-Wk5"/>
-                            <constraint firstItem="bbX-2m-rjR" firstAttribute="bottom" secondItem="Dnm-7B-ZU9" secondAttribute="bottom" constant="305" id="JoJ-7o-Y7o"/>
-                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="top" secondItem="ogo-bn-Hzw" secondAttribute="bottom" constant="50" id="Jtb-SI-ORe"/>
-                            <constraint firstItem="i0z-Dj-pTA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dnm-7B-ZU9" secondAttribute="trailing" constant="8" symbolic="YES" id="Kk3-LW-wsb"/>
-                            <constraint firstItem="vga-SP-Svb" firstAttribute="baseline" secondItem="i0z-Dj-pTA" secondAttribute="baseline" id="Nkd-Nh-sUR"/>
-                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="centerX" secondItem="yh6-GR-57p" secondAttribute="centerX" id="QpS-wf-dIg"/>
-                            <constraint firstItem="Dnm-7B-ZU9" firstAttribute="leading" secondItem="vga-SP-Svb" secondAttribute="trailing" constant="40" id="Tek-Nb-sHJ"/>
-                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="leading" secondItem="bbX-2m-rjR" secondAttribute="leading" constant="87" id="VbW-qR-Yhz"/>
-                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="centerX" secondItem="Dnm-7B-ZU9" secondAttribute="centerX" id="hdu-JX-awB"/>
-                            <constraint firstItem="vga-SP-Svb" firstAttribute="leading" secondItem="bbX-2m-rjR" secondAttribute="leading" constant="89" id="uZy-j4-Qp6"/>
+                            <constraint firstItem="4eo-gW-zUV" firstAttribute="centerX" secondItem="VaX-ML-i9e" secondAttribute="centerX" id="919-um-UUr"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="top" secondItem="yh6-GR-57p" secondAttribute="bottom" constant="20" id="9ZU-mE-DgC"/>
+                            <constraint firstItem="yh6-GR-57p" firstAttribute="centerX" secondItem="VaX-ML-i9e" secondAttribute="centerX" id="IDZ-3O-ddK"/>
+                            <constraint firstItem="4eo-gW-zUV" firstAttribute="top" secondItem="ogo-bn-Hzw" secondAttribute="bottom" constant="24" id="XRD-dn-hKn"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="centerX" secondItem="VaX-ML-i9e" secondAttribute="centerX" id="ZhI-we-Gub"/>
+                            <constraint firstItem="yh6-GR-57p" firstAttribute="top" secondItem="bbX-2m-rjR" secondAttribute="top" constant="40" id="bPI-3C-eG5"/>
+                            <constraint firstItem="ogo-bn-Hzw" firstAttribute="leading" secondItem="bbX-2m-rjR" secondAttribute="leading" constant="32" id="hsH-S8-w35"/>
+                            <constraint firstItem="bbX-2m-rjR" firstAttribute="trailing" secondItem="ogo-bn-Hzw" secondAttribute="trailing" constant="32" id="wiT-tu-8hd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bbX-2m-rjR"/>
                     </view>
