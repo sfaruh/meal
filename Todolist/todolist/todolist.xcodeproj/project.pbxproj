@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22D24282222A6D5A00B4884F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D24281222A6D5A00B4884F /* TableViewController.swift */; };
 		22D24284222A6D9A00B4884F /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D24283222A6D9A00B4884F /* AddTaskViewController.swift */; };
+		849C6468223BCEE900A074A6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6467223BCEE900A074A6 /* ListTableViewCell.swift */; };
 		84F347162227DB0A004EBA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F347152227DB0A004EBA9A /* AppDelegate.swift */; };
 		84F3471B2227DB0A004EBA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F347192227DB0A004EBA9A /* Main.storyboard */; };
 		84F3471D2227DB0B004EBA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F3471C2227DB0B004EBA9A /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		22D24281222A6D5A00B4884F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		22D24283222A6D9A00B4884F /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		849C6467223BCEE900A074A6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		84F347122227DB0A004EBA9A /* todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F347152227DB0A004EBA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F3471A2227DB0A004EBA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,10 +58,11 @@
 		84F347142227DB0A004EBA9A /* todolist */ = {
 			isa = PBXGroup;
 			children = (
-				84F347152227DB0A004EBA9A /* AppDelegate.swift */,
+				849C6467223BCEE900A074A6 /* ListTableViewCell.swift */,
 				22D24281222A6D5A00B4884F /* TableViewController.swift */,
-				84F347192227DB0A004EBA9A /* Main.storyboard */,
 				22D24283222A6D9A00B4884F /* AddTaskViewController.swift */,
+				84F347192227DB0A004EBA9A /* Main.storyboard */,
+				84F347152227DB0A004EBA9A /* AppDelegate.swift */,
 				84F3471C2227DB0B004EBA9A /* Assets.xcassets */,
 				84F3471E2227DB0B004EBA9A /* LaunchScreen.storyboard */,
 				84F347212227DB0B004EBA9A /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F347162227DB0A004EBA9A /* AppDelegate.swift in Sources */,
+				849C6468223BCEE900A074A6 /* ListTableViewCell.swift in Sources */,
 				22D24284222A6D9A00B4884F /* AddTaskViewController.swift in Sources */,
 				22D24282222A6D5A00B4884F /* TableViewController.swift in Sources */,
 			);

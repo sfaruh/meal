@@ -8,25 +8,33 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
-    var task:String
-    var subtask:String
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var task: String = ""
+    var subtask: String = ""
+    private var tasks: [(String, String)] = []
+    
+    @IBOutlet var listTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addTasks(task: task, subtask: subtask)
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func addTasks(task: String, subtask: String) {
+        tasks.append((task, subtask))
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
     }
-    let sb = UIViewController(name: "AddTaskViewController")
-    let vc = sb.instantiateViewController(withIdentifier: "AddTaskViewController")
-    TableViewController.task = taskname
-    TableViewController.subtask = subtaskname
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell") as! ListTableViewCell
+        cell.taskLabel.text = tasks[indexPath.row].0
+        cell.subtaskLabel.text = tasks[indexPath.row].1
+        return cell
+    }
+    
 }

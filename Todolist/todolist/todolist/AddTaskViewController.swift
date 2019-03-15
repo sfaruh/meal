@@ -15,15 +15,20 @@ class AddTaskViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    var taskname: String = ""
-    var subtaskname: String = ""
-    @IBOutlet weak var TaskTextField: UITextField!
     
+    @IBOutlet weak var TaskTextField: UITextField!
     @IBOutlet weak var SubTaskTextField: UITextField!
     
     @IBAction func AddTaskButton(_ sender: Any) {
-        taskname = TaskTextField.text!
-        subtaskname = SubTaskTextField.text!
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        let myTask = TaskTextField.text ?? ""
+        let mySubtask = SubTaskTextField.text ?? ""
         
+        vc.task = myTask
+        vc.subtask = mySubtask
+        //vc.addTasks(task: myTask, subtask: mySubtask)
+        
+        // перейти на другой таб 
     }
 }
