@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="et4-zO-GrV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="et4-zO-GrV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,12 +29,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nu4-fF-dw6">
-                                <rect key="frame" x="30" y="132" width="315" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVR-yD-gN7">
                                 <rect key="frame" x="272" y="170" width="73" height="30"/>
                                 <state key="normal" title="ADD TASK"/>
@@ -50,20 +43,15 @@
                             <constraint firstItem="N54-vT-SFH" firstAttribute="trailing" secondItem="gVR-yD-gN7" secondAttribute="trailing" constant="30" id="7S1-o3-D1l"/>
                             <constraint firstItem="lk6-Rq-LRt" firstAttribute="centerX" secondItem="5yr-cq-Rxj" secondAttribute="centerX" id="7cH-Sh-EB5"/>
                             <constraint firstItem="N54-vT-SFH" firstAttribute="trailing" secondItem="aOM-gE-XZV" secondAttribute="trailing" constant="30" id="BS0-9d-tnf"/>
-                            <constraint firstItem="gVR-yD-gN7" firstAttribute="top" secondItem="nu4-fF-dw6" secondAttribute="bottom" constant="8" id="GTu-Mo-wJv"/>
-                            <constraint firstItem="nu4-fF-dw6" firstAttribute="centerX" secondItem="5yr-cq-Rxj" secondAttribute="centerX" id="Ir9-lW-bMC"/>
                             <constraint firstItem="aOM-gE-XZV" firstAttribute="centerX" secondItem="5yr-cq-Rxj" secondAttribute="centerX" id="Kyx-ZE-tbC"/>
                             <constraint firstItem="aOM-gE-XZV" firstAttribute="top" secondItem="lk6-Rq-LRt" secondAttribute="bottom" constant="53" id="ZJk-Rr-jyn"/>
-                            <constraint firstItem="N54-vT-SFH" firstAttribute="trailing" secondItem="nu4-fF-dw6" secondAttribute="trailing" constant="30" id="aL9-TE-a6g"/>
-                            <constraint firstItem="nu4-fF-dw6" firstAttribute="top" secondItem="aOM-gE-XZV" secondAttribute="bottom" constant="8" id="cp7-xc-9Li"/>
-                            <constraint firstItem="nu4-fF-dw6" firstAttribute="leading" secondItem="N54-vT-SFH" secondAttribute="leading" constant="30" id="g7M-tZ-mEt"/>
+                            <constraint firstItem="gVR-yD-gN7" firstAttribute="top" secondItem="aOM-gE-XZV" secondAttribute="bottom" constant="46" id="eg5-tx-YrN"/>
                             <constraint firstItem="aOM-gE-XZV" firstAttribute="leading" secondItem="N54-vT-SFH" secondAttribute="leading" constant="30" id="vzZ-AO-4ea"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N54-vT-SFH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add task" id="NpU-od-RJV"/>
                     <connections>
-                        <outlet property="SubTaskTextField" destination="nu4-fF-dw6" id="2FK-oU-DTp"/>
                         <outlet property="TaskTextField" destination="aOM-gE-XZV" id="i0U-sD-P01"/>
                     </connections>
                 </viewController>
@@ -109,30 +97,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc4-8r-t1v">
-                                                    <rect key="frame" x="24" y="24" width="327" height="31"/>
+                                                    <rect key="frame" x="24" y="24" width="327" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-pV-ya9">
-                                                    <rect key="frame" x="24" y="67" width="327" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="AeQ-pV-ya9" secondAttribute="trailing" constant="24" id="6dD-D4-OJ2"/>
-                                                <constraint firstAttribute="bottom" secondItem="AeQ-pV-ya9" secondAttribute="bottom" constant="24" id="UtN-mF-TDG"/>
                                                 <constraint firstItem="qc4-8r-t1v" firstAttribute="leading" secondItem="KOS-dJ-WDG" secondAttribute="leading" constant="24" id="XFj-hb-vQg"/>
                                                 <constraint firstAttribute="trailing" secondItem="qc4-8r-t1v" secondAttribute="trailing" constant="24" id="XmH-X5-c0R"/>
-                                                <constraint firstItem="AeQ-pV-ya9" firstAttribute="leading" secondItem="KOS-dJ-WDG" secondAttribute="leading" constant="24" id="jPc-BH-QaX"/>
-                                                <constraint firstItem="AeQ-pV-ya9" firstAttribute="top" secondItem="qc4-8r-t1v" secondAttribute="bottom" constant="12" id="lql-m2-SjN"/>
                                                 <constraint firstItem="qc4-8r-t1v" firstAttribute="top" secondItem="KOS-dJ-WDG" secondAttribute="top" constant="24" id="rtH-ji-kMe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="subtaskLabel" destination="AeQ-pV-ya9" id="Kl1-eB-n61"/>
                                             <outlet property="taskLabel" destination="qc4-8r-t1v" id="MTu-be-wX0"/>
                                         </connections>
                                     </tableViewCell>
@@ -155,6 +132,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="E3x-Fh-sa2"/>
                     <connections>
                         <outlet property="listTableView" destination="dnr-95-9g2" id="yAt-Fp-ZNr"/>
+                        <outlet property="tableView" destination="dnr-95-9g2" id="BTp-JW-Rau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKU-Ja-ZAK" userLabel="First Responder" sceneMemberID="firstResponder"/>

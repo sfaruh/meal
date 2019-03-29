@@ -9,7 +9,7 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,17 +17,18 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBOutlet weak var TaskTextField: UITextField!
-    @IBOutlet weak var SubTaskTextField: UITextField!
+
     
     @IBAction func AddTaskButton(_ sender: Any) {
+
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        let myTask = TaskTextField.text ?? ""
-        let mySubtask = SubTaskTextField.text ?? ""
+        vc.tasks.append(TaskTextField.text!)
         
-        vc.task = myTask
-        vc.subtask = mySubtask
-        //vc.addTasks(task: myTask, subtask: mySubtask)
+        
+        //vc.task = myTask
+        //vc.subtask = mySubtask
+   //     vc.addTasks(task: myTask)
         
         // перейти на другой таб 
     }

@@ -11,10 +11,8 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var taskLabel: UILabel!
-    @IBOutlet weak var subtaskLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
 }
