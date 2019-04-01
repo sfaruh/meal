@@ -10,12 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var subtaskValue: UITextField!
     @IBOutlet weak var taskValue: UITextField!
     @IBAction func addTask(_ sender: Any) {
         
         let itemsObject = UserDefaults.standard.object(forKey: "items")
-            
+            let subtaskObject = UserDefaults.standard.object(forKey: "subtask")
         var items:[String]
+        var subtask:[String]
         
         if let tempItem = itemsObject as? [String] {
             
@@ -28,6 +30,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
         }
         
+        UserDefaults.standard.set(subtask, forKey: "subtask")
         UserDefaults.standard.set(items, forKey: "items")
         
         taskValue.text = ""
@@ -46,13 +49,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 

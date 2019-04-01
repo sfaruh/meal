@@ -15,6 +15,7 @@
 		52996A2C1FD7D6A100968B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52996A2A1FD7D6A100968B79 /* LaunchScreen.storyboard */; };
 		52996A371FD7D6A200968B79 /* to_do_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996A361FD7D6A200968B79 /* to_do_listTests.swift */; };
 		52996A421FD7D6A200968B79 /* to_do_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996A411FD7D6A200968B79 /* to_do_listUITests.swift */; };
+		CE4637DB2252063900ACAAF6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4637DA2252063900ACAAF6 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		52996A3D1FD7D6A200968B79 /* to do listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "to do listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52996A411FD7D6A200968B79 /* to_do_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_do_listUITests.swift; sourceTree = "<group>"; };
 		52996A431FD7D6A200968B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4637DA2252063900ACAAF6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				52996A211FD7D6A100968B79 /* FirstViewController.swift */,
 				52996A231FD7D6A100968B79 /* SecondViewController.swift */,
 				52996A251FD7D6A100968B79 /* Main.storyboard */,
+				CE4637DA2252063900ACAAF6 /* TableViewCell.swift */,
 				52996A281FD7D6A100968B79 /* Assets.xcassets */,
 				52996A2A1FD7D6A100968B79 /* LaunchScreen.storyboard */,
 				52996A2D1FD7D6A100968B79 /* Info.plist */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52996A241FD7D6A100968B79 /* SecondViewController.swift in Sources */,
+				CE4637DB2252063900ACAAF6 /* TableViewCell.swift in Sources */,
 				52996A201FD7D6A100968B79 /* AppDelegate.swift in Sources */,
 				52996A221FD7D6A100968B79 /* FirstViewController.swift in Sources */,
 			);
@@ -433,6 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = "to do list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mmbook.to-do-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5DCDBG2W2;
 				INFOPLIST_FILE = "to do list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mmbook.to-do-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
